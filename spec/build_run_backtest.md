@@ -54,8 +54,8 @@
 ## 3. 實作任務拆解 (Task Breakdown)
 
 - [x] **Task 1**: 更新 `spec/build_run_backtest.md` 規格書（直接讀取 `simulation/FITX.csv`，優先產出 PNG，排除最佳化）。
-- [ ] **Task 2**: 創建 `simulation/` 目錄與範例數據生成/讀取機制 (`simulation/FITX.csv`)。
-- [ ] **Task 3**: 撰寫策略檔案 `strategies/tw_ma_strategy.py`。
-- [ ] **Task 4**: 實作 `run_backtest.py` 主程式（讀取 CSV -> 初始化 BacktestingEngine -> 執行回測）。
-- [ ] **Task 5**: 實作 `matplotlib` 權益與回撤圖表繪製邏輯，導出 `backtest_result.png`。
-- [ ] **Task 6**: 執行 `python run_backtest.py` 驗證回測流程與 PNG 圖表產出。
+- [x] **Task 2**: 創建 `simulation/` 目錄與範例數據生成/讀取機制 (`simulation/FITX.csv`)。
+- [x] **Task 3**: 撰寫策略檔案 `strategies/tw_ma_strategy.py`。
+- [x] **Task 4**: 實作 `run_backtest.py` 主程式（讀取 CSV -> 初始化 BacktestingEngine -> 執行回測）。
+- [x] **Task 5**: 實作 `matplotlib` 權益與回撤圖表繪製邏輯，導出 `backtest_result.png`。
+- [x] **Task 6**: 執行 `python run_backtest.py` 驗證回測流程與 PNG 圖表產出。
