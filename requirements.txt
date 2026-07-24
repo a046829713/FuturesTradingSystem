@@ -1,6 +1,5 @@
 # FuturesTradingSystem requirements
 vnpy>=3.9.0
-vnpy_evtengine>=1.0.1
 vnpy_ctastrategy>=1.1.0
 vnpy_ctabacktester>=1.1.0
 vnpy_datamanager>=1.0.0

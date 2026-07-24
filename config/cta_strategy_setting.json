@@ -1,26 +1,42 @@
 {
-  "TWFuturesMAStrategy_TX00": {
-    "class_name": "TWFuturesMAStrategy",
-    "vt_symbol": "TX00.TAIFEX",
-    "setting": {
-      "fast_window": 10,
-      "slow_window": 30,
-      "fixed_size": 1,
-      "sl_points": 30,
-      "tp_points": 60,
-      "exit_time": "13:45"
+    "TWFuturesMAStrategy_TX00": {
+        "class_name": "TWFuturesMAStrategy", // 策略類別名稱
+        "vt_symbol": "TX00.LOCAL", // 回測合約代碼
+        "backtest_setting": {
+            "interval": "1m", // K線週期 (1m: 1分鐘)
+            "rate": 0.00002, // 單筆交易手續費率 (0.002%)
+            "slippage": 1.0, // 交易滑點 (每口 NT$ 200 損益)
+            "size": 200, // 台指期合約乘數 (每點 NT$ 200)
+            "pricetick": 1.0, // 最小變動點數 (1點)
+            "capital": 1000000 // 初始回測資本 (NT$ 1,000,000)
+        },
+        "setting": {
+            "fast_window": 10, // 快線週期 (根數)
+            "slow_window": 30, // 慢線週期 (根數)
+            "fixed_size": 1, // 固定交易口數 (口)
+            "sl_points": 30.0, // 風控停損點數 (點)
+            "tp_points": 60.0, // 風控停利點數 (點)
+            "exit_time": "13:40" // 當沖收盤平倉時間
+        }
+    },
+    "TWFuturesBreakoutStrategy_TX00": {
+        "class_name": "TWFuturesBreakoutStrategy", // 策略類別名稱
+        "vt_symbol": "TX00.TAIFEX", // 回測合約代碼
+        "backtest_setting": {
+            "interval": "1m", // K線週期
+            "rate": 0.00002, // 手續費率
+            "slippage": 1.0, // 滑點
+            "size": 200, // 合約乘數
+            "pricetick": 1.0, // 最小跳動
+            "capital": 1000000 // 初始資金
+        },
+        "setting": {
+            "donchian_window": 20, // 唐奇安通道週期
+            "atr_window": 14, // ATR 週期
+            "fixed_size": 1, // 固定口數
+            "sl_points": 25.0, // 停損點數
+            "tp_points": 50.0, // 停利點數
+            "exit_time": "13:40" // 當沖平倉時間
+        }
     }
-  },
-  "TWFuturesBreakoutStrategy_TX00": {
-    "class_name": "TWFuturesBreakoutStrategy",
-    "vt_symbol": "TX00.TAIFEX",
-    "setting": {
-      "donchian_window": 20,
-      "atr_window": 14,
-      "fixed_size": 1,
-      "sl_points": 25,
-      "tp_points": 50,
-      "exit_time": "13:45"
-    }
-  }
 }
