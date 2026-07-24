@@ -54,3 +54,17 @@
 1. **先檢查再修改**：進行修改前，應先檢視相關檔案與現有邏輯，不得假設未確認的變數或檔名。
 2. **實體執行驗證**：代碼修改完成後，**必須**使用專案虛擬環境解釋器（`..\Scripts\python.exe`）執行測試或回測腳本進行實體驗證。
 3. **成果回報**：確認執行成功、無語法或執行期錯誤後，方可向使用者回報任務完成，並提供明確的變更摘要與驗證結果。
+
+---
+
+## 5. vn.py 生態系與官方套件優先規範 (vn.py Ecosystem & Official-First Policy)
+
+1. **專案定位**：
+   * 本專案致力於建構基於 `vn.py` 的量化交易生態系平台。
+2. **官方套件優先原則 (Official Package First)**：
+   * 在擴增功能、引入交易介面 (Gateway)、數據庫適配器 (Database Adaptor)、應用模組 (App Module, 如 CTA 策略、演算法交易等) 或圖表元件時，**必須優先採用 vn.py 官方團隊開發與維護的套件**（例如：`vnpy_ctp`, `vnpy_ctastrategy`, `vnpy_sqlite`, `vnpy_charting`, `vnpy_algotrading` 等）。
+   * 除非官方無相應套件或經明確討論，否則禁止隨意替換為非官方第三方庫或重新發明輪子。
+3. **架構與設計風格對齊 (Architecture & Coding Style Alignment)**：
+   * **事件驅動架構**：遵循 `vn.py` 之 `EventEngine` 與 `MainEngine` 引擎擴充與事件監聽設計。
+   * **標準資料結構**：統一採用 `vn.py` 官方定義之標準數據類別（如 `TickData`, `BarData`, `OrderData`, `TradeData`, `ContractData` 等）。
+   * **程式碼風格**：自定義模組與策略之開發風格、命名規範與 Exception 處理邏輯，必須切實符合 `vn.py` 官方團隊的風格與設計思維。
