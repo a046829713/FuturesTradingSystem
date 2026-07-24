@@ -113,10 +113,7 @@ def run_vnpy_backtest(csv_bars: list, config_path: str = os.path.join("config", 
     engine.run_backtesting()
     df = engine.calculate_result()
     stats = engine.calculate_statistics()
-    engine.show_chart().show()
-    print("test")
 
-    plt.show()
     # 提取圖表數據
     if df is not None and not df.empty:
         dates = list(df.index)
