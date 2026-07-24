@@ -1,0 +1,15 @@
+{
+  "font.family": "Microsoft JhengHei",
+  "font.size": 11,
+  "log.active": true,
+  "log.level": 20,
+  "log.console": true,
+  "log.file": true,
+  "database.timezone": "Asia/Taipei",
+  "database.driver": "sqlite",
+  "database.database": "database.db",
+  "database.host": "",
+  "database.port": 0,
+  "database.user": "",
+  "database.password": ""
+}

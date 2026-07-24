@@ -1,0 +1,26 @@
+{
+  "TWFuturesMAStrategy_TX00": {
+    "class_name": "TWFuturesMAStrategy",
+    "vt_symbol": "TX00.TAIFEX",
+    "setting": {
+      "fast_window": 10,
+      "slow_window": 30,
+      "fixed_size": 1,
+      "sl_points": 30,
+      "tp_points": 60,
+      "exit_time": "13:45"
+    }
+  },
+  "TWFuturesBreakoutStrategy_TX00": {
+    "class_name": "TWFuturesBreakoutStrategy",
+    "vt_symbol": "TX00.TAIFEX",
+    "setting": {
+      "donchian_window": 20,
+      "atr_window": 14,
+      "fixed_size": 1,
+      "sl_points": 25,
+      "tp_points": 50,
+      "exit_time": "13:45"
+    }
+  }
+}
